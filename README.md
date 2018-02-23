@@ -1,11 +1,9 @@
 # Tutorials
-<p><b><i>"People who have achieved great success are not necessarily more skillful or intelligent than others. What separates them is their burning desire and thirst for knowledge. The more one knows, the more one achieves." -Robin Sharma</p></b></i>
-
 <h5>This repository provides codes and webapps for tutorials written on <a href="https://medium.com/@dave_p">medium</a>.</h5> 
-
+<p><b><i>"People who have achieved great success are not necessarily more skillful or intelligent than others. What separates them is their burning desire and thirst for knowledge. The more one knows, the more one achieves." -Robin Sharma</p></b></i>
 <h5>Topics:</h5>
 <ul>
-  <li>Linked lists: <a href="https://davidpynes.github.io/Tutorials/LinkedLists/"><b>(demo)</b></a></li>
+  <li><h5>Linked lists:</h5><b>(<a href="https://davidpynes.github.io/Tutorials/LinkedLists/">demo</a>)</b></li>
     <ul>
       <li><b>Introduction</b> - single linked list appends to the head.</li>
       <ul><li>Read the article <a href="https://medium.freecodecamp.org/linked-lists-why-what-and-how-f96b04790ac4"> here </a>.</li></ul>
