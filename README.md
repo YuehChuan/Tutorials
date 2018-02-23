@@ -5,15 +5,14 @@
 
 <h5>Topics:</h5>
 <ul>
-  <li>Linked lists:</li>
+  <li>Linked lists: <a href="https://davidpynes.github.io/Tutorials/LinkedLists/"><b>(demo)</b></a></li>
     <ul>
-      <li><b>Demo</b> - webapp <a href="https://davidpynes.github.io/Tutorials/LinkedLists/">here</a>
       <li><b>Introduction</b> - single linked list appends to the head.</li>
-      <ul><li>Read the article <a href="https://medium.freecodecamp.org/linked-lists-why-what-and-how-f96b04790ac4"> here </a></li></ul>
+      <ul><li>Read the article <a href="https://medium.freecodecamp.org/linked-lists-why-what-and-how-f96b04790ac4"> here </a>.</li></ul>
       <li><b>Intermediate</b> - single linked list add nodes in order.</li>
-      <ul><li>Read the article <a href="https://medium.freecodecamp.org/linked-list-why-what-and-how-pt-2-20c5f19323c3"> here </a></li></ul>
+      <ul><li>Read the article <a href="https://medium.freecodecamp.org/linked-list-why-what-and-how-pt-2-20c5f19323c3"> here </a>.</li></ul>
       <li><b>Advanced</b> - double linked list, nodes in order, has a head and a tail.</li>
-      <ul><li>Read the article <a href="https://medium.freecodecamp.org/doubly-linked-list-why-what-and-how-59aba937abcf"> here </a></li></ul>
+      <ul><li>Read the article <a href="https://medium.freecodecamp.org/doubly-linked-list-why-what-and-how-59aba937abcf"> here </a>.</li></ul>
     </ul>
   <li>Binary trees</li>
 </ul>
