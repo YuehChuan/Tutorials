@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title> Binary Tree  </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=.85, maximum-scale=.85, user-scalable=no">
     <meta name="author" content="Dave P">
   <style>
     .controlContainer {
@@ -169,7 +169,7 @@
 
   </style>
   </head>
-  <body>
+  <body onload="initTree()">
   <div class="controlContainer">
     <input id="node_val" type="text" placeholder="Enter an integer value.." style="margin: 0px 10px 10px 0px" /><br/>
     <button id="addNodeButton" onclick="makeNode()" >add node</button>
@@ -313,7 +313,7 @@
             i = i*2+2
         }
         if (i>=15) {
-         throwError("Tree max height is four.")
+         throwError("In the demo, the tree max height is four.")
          i = -1
         }
         return i
@@ -492,6 +492,13 @@
     function clearNodes() {
       document.getElementById("canvas").innerHTML = ""
       for(var j=0;j<16;j++) { val[j] = Number.NEGATIVE_INFINITY }
+    }
+    
+    function initTree() {
+      setTimeout(function() { document.getElementById("node_val").value = 10; makeNode() }, 1000)
+      setTimeout(function() { document.getElementById("node_val").value = 5; makeNode() }, 3000)
+      setTimeout(function() { document.getElementById("node_val").value = 15; makeNode() }, 4500)
+      setTimeout(function() { document.getElementById("node_val").focus() }, 5000)
     }
 
   </script>

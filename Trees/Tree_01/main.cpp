@@ -66,8 +66,8 @@ class BinaryTree {
     /* Bonus function to remove nodes from the binary tree. */
     void removeNode(int v_) {
       node* walker = root;
-      node* prev = walker; //prev is parent of walker. To be used in case 1 for assigning a null pointer.
-      while(walker) { //find the desired node.
+      node* prev = walker;
+      while(walker) {
         if(v_ == walker->val)
           break;
         prev = walker;
@@ -76,23 +76,23 @@ class BinaryTree {
       if(!walker)
         return;
       else {
-        node* temp = walker; //case 1: walker is a leaf.
-        if(walker->right) { //case 2: walker is not a leaf.
+        node* temp = walker;
+        if(walker->right) {
           temp = walker->right;
-          while(temp->left) { //case 2a: find the left most right node.
+          while(temp->left) {
             prev = temp;
             temp = temp->left;
           }
-          if(temp == walker->right) //case 2b: there were no left nodes.
+          if(temp == walker->right)
             walker->right = temp->right;
         }
-        else if(walker->left) { //case 3: walker is not a leaf.
+        else if(walker->left) {
           temp = walker->left;
-          while(temp->right) { //case 3a: find the right most left node.
+          while(temp->right) {
             prev = temp;
             temp = temp->right;
           }
-          if(temp == walker->left) //case 3b: there were no right nodes.
+          if(temp == walker->left)
             walker->left = temp->left;
         }
         if(prev->left == temp)
