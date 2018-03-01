@@ -1,7 +1,7 @@
 # Tutorials
 <h5>This repository provides code and webapps for tutorials written on <a href="https://medium.com/@dave_p">medium</a>.</h5>
 
-<p><i>"People who have achieved great success are not necessarily more skillful or intelligent than others. What separates them is their burning desire and thirst for knowledge. The more one knows, the more one achieves." -Robin Sharma</p></i>
+<p><i>"Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime."</p></i>
 
 <h5>Topics:</h5>
 <ul>
