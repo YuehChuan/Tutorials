@@ -1,5 +1,5 @@
 # Tutorials
-<h4>This repository provides code and webapps for tutorials written on <a href="https://medium.com/@dave_p">medium</a>.</h4>
+<h4>This repository provides code and webapps for tutorials written <a href="https://medium.com/@dave_p">here</a>.</h4>
 
 <h5>Topics:</h5>
 <ul>
