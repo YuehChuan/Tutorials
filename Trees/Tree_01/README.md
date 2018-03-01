@@ -1,1 +1,1 @@
-<b>Introduction</b> - (<a href="">read</a>) - Binary Trees, a manageable for finding values.</li>
+<b>Introduction</b> - (<a href="">read</a>) - Binary trees, a manageable approach to finding values.
