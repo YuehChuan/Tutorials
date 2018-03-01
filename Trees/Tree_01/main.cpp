@@ -108,11 +108,16 @@ class BinaryTree {
 int main() {
   srand(time(NULL));
   BinaryTree bt;
+  int randomNumberToFind;
+  int randomPlacement = rand()%100000;
   for(int i=0;i<100000;i++) {
-    bt.addNode(rand()%9999999999);
+    int randomNumber = 202*10000000+(rand()%900 + 100)*1000+rand()%9000+1000;
+    if(i == randomPlacement)
+      randomNumberToFind = randomNumber;
+    bt.addNode(randomNumber);
   }
-  bt.addNode(2024561111);
   bt.print();
-  cout<<"It took "<<bt.findNodeCount(2024561111)<<" traversals to find the desired phone number."<<endl;
+  cout<<endl<<"Looking for "<<randomNumberToFind<<"..."<<endl;
+  cout<<"Found after "<<bt.findNodeCount(randomNumberToFind)<<" traversals."<<endl;
   return 0;
 }
