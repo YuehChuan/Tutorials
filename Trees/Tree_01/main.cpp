@@ -107,9 +107,9 @@ class BinaryTree {
 
 int main() {
   srand(time(NULL));
-  BinaryTree bt;
   int randomNumberToFind;
   int randomPlacement = rand()%100000;
+  BinaryTree bt;
   for(int i=0;i<100000;i++) {
     int randomNumber = 202*10000000+(rand()%900 + 100)*1000+rand()%9000+1000;
     if(i == randomPlacement)
