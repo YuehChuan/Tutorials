@@ -1,8 +1,6 @@
 # Tutorials
 <h5>This repository provides code and webapps for tutorials written on <a href="https://medium.com/@dave_p">medium</a>.</h5>
 
-<p><i>"Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime."</p></i>
-
 <h5>Topics:</h5>
 <ul>
   <li><b>Linked lists: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/LinkedLists/">demo</a>)</b></li>
