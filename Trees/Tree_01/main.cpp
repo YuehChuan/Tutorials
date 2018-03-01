@@ -46,15 +46,14 @@ class BinaryTree {
         }
       }
     }
-    int findNode(int v_) {
-      int traversalCount = 0;
+    int findNodeCount(int v_) {
+      int count = 0;
       node* walker = root;
       while(walker) {
-        if(v_ == walker->val) {
-          return traversalCount;
-        }
+        if(v_ == walker->val)
+          return count;
         (v_ < walker->val) ? walker = walker->left : walker = walker->right;
-        traversalCount++;
+        count++;
       }
       return -1;
     }
@@ -103,6 +102,7 @@ class BinaryTree {
         delete temp;
       }
     }
+    BinaryTree() { root = NULL; }
 };
 
 int main() {
@@ -113,6 +113,6 @@ int main() {
   }
   bt.addNode(2024561111);
   bt.print();
-  cout<<"It took "<<bt.findNode(2024561111)<<" traversals to find the desired phone number."<<endl;
+  cout<<"It took "<<bt.findNodeCount(2024561111)<<" traversals to find the desired phone number."<<endl;
   return 0;
 }
