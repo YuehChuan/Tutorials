@@ -1,6 +1,8 @@
 # Tutorials
-<h5>This repository provides codes and webapps for tutorials written on <a href="https://medium.com/@dave_p">medium</a>.</h5> 
+<h5>This repository provides code and webapps for tutorials written on <a href="https://medium.com/@dave_p">medium</a>.</h5>
+
 <p><i>"People who have achieved great success are not necessarily more skillful or intelligent than others. What separates them is their burning desire and thirst for knowledge. The more one knows, the more one achieves." -Robin Sharma</p></i>
+
 <h5>Topics:</h5>
 <ul>
   <li><b>Linked lists: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/LinkedLists/">demo</a>)</b></li>
@@ -15,6 +17,6 @@
   <li><b>Trees: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/">demo</a>)</b></li>
     <ul>
       <li><b>Introduction</b> - (<a href="">read</a>) -
-      Binary Trees, a manageable for finding values.</li>
-      
+      Binary trees, a manageable approach to finding values.</li>
+     
 </ul>
