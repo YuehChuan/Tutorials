@@ -395,98 +395,99 @@
         }
         if(i>=15) {
           throwError("Number not found in tree.")
-          return
         }
-        var j = i
-        var branchIndicator = ""
-        if(j == 0)
-          branchIndicator = "Root"
-        else if(j%2==0)
-          branchIndicator = "Right"
-        else if(j%2==1)
-          branchIndicator = "Left"
-        if((j*2+2)<15 && val[j*2+2]!=Number.NEGATIVE_INFINITY ) {
-          j = j*2+2
-          branchIndicator = "Right"
-          if(val[j*2+1] != Number.NEGATIVE_INFINITY) {
-            branchIndicator = "Left"
-            while(j) { 
-              if( (j*2+1)<15 && val[j*2+1]!=Number.NEGATIVE_INFINITY )
-                j = j*2 + 1
-              else
-                break
-            }
-          }
-        }
-        else if((j*2+1)<15 && val[j*2+1]!=Number.NEGATIVE_INFINITY ) {
-          j = j*2+1
-          branchIndicator = "Left"
-          if(val[j*2+2] != Number.NEGATIVE_INFINITY) {
+        else {
+          var j = i
+          var branchIndicator = ""
+          if(j == 0)
+            branchIndicator = "Root"
+          else if(j%2==0)
             branchIndicator = "Right"
-            while(j) {
-              if( (j*2+2)<15 && val[j*2+2]!=Number.NEGATIVE_INFINITY )
-                j = j*2 + 2
-              else
-                break
+          else if(j%2==1)
+            branchIndicator = "Left"
+          if((j*2+2)<15 && val[j*2+2]!=Number.NEGATIVE_INFINITY ) {
+            j = j*2+2
+            branchIndicator = "Right"
+            if(val[j*2+1] != Number.NEGATIVE_INFINITY) {
+              branchIndicator = "Left"
+              while(j) { 
+                if( (j*2+1)<15 && val[j*2+1]!=Number.NEGATIVE_INFINITY )
+                  j = j*2 + 1
+                else
+                  break
+              }
             }
           }
-        }
+          else if((j*2+1)<15 && val[j*2+1]!=Number.NEGATIVE_INFINITY ) {
+            j = j*2+1
+            branchIndicator = "Left"
+            if(val[j*2+2] != Number.NEGATIVE_INFINITY) {
+              branchIndicator = "Right"
+              while(j) {
+                if( (j*2+2)<15 && val[j*2+2]!=Number.NEGATIVE_INFINITY )
+                  j = j*2 + 2
+                else
+                  break
+              }
+            }
+          }
 
-        var nodeValA = document.getElementById("nodeValId_" + i)
-        var nodeValB = document.getElementById("nodeValId_" + j)
-        fadeOutEffect(nodeValA,50)
-        fadeOutEffect(nodeValB,50)
-        setTimeout(function() {
+          var nodeValA = document.getElementById("nodeValId_" + i)
+          var nodeValB = document.getElementById("nodeValId_" + j)
+          fadeOutEffect(nodeValA,50)
+          fadeOutEffect(nodeValB,50)
+          setTimeout(function() {
             nodeValA.innerText = val[j]
             nodeValB.innerText = val[i]
             fadeInEffect(nodeValA,50,0)
             fadeInEffect(nodeValB,50,0)
-        },1000)
+          },1000)
 
-        setTimeout(function() {
-          document.getElementById("nodeObjId_" + j).classList.add("nodeDrop" + branchIndicator)
-          document.getElementById("branchObjId_" + j).classList.add("branchDrop" + branchIndicator)
-        }, 2500)
+          setTimeout(function() {
+            document.getElementById("nodeObjId_" + j).classList.add("nodeDrop" + branchIndicator)
+            document.getElementById("branchObjId_" + j).classList.add("branchDrop" + branchIndicator)
+          }, 2500)
         
-        setTimeout(function() { 
-          document.getElementById("nodeObjId_" + j).remove()
-          document.getElementById("branchObjId_" + j).remove()    
-          val[i] = val[j]
-          val[j] = Number.NEGATIVE_INFINITY
-        }, 5000)
+          setTimeout(function() { 
+            document.getElementById("nodeObjId_" + j).remove()
+            document.getElementById("branchObjId_" + j).remove()    
+            val[i] = val[j]
+            val[j] = Number.NEGATIVE_INFINITY
+          }, 5000)
         
-        if(branchIndicator == "Right" && val[j*2+2]!=Number.NEGATIVE_INFINITY) {
-          setTimeout(function() { 
-            while( (j*2+2)<15 && val[j*2+2]!=Number.NEGATIVE_INFINITY) {
-              var nodeObj = makeNodeHelper(j,val[j*2+2])
-              nodeObj.style.opacity = 0
-              fadeInEffect(nodeObj,120,0)          
-              val[j] = val[j*2+2]
-              val[j*2+2] = Number.NEGATIVE_INFINITY
-              document.getElementById("nodeObjId_" + (j*2+2)).remove()
-              document.getElementById("branchObjId_" + (j*2+2)).remove()
-              j = j*2 + 2
-            }
-          }, 6500)
+          if(branchIndicator == "Right" && val[j*2+2]!=Number.NEGATIVE_INFINITY) {
+            setTimeout(function() { 
+              while( (j*2+2)<15 && val[j*2+2]!=Number.NEGATIVE_INFINITY) {
+                var nodeObj = makeNodeHelper(j,val[j*2+2])
+                nodeObj.style.opacity = 0
+                fadeInEffect(nodeObj,120,0)          
+                val[j] = val[j*2+2]
+                val[j*2+2] = Number.NEGATIVE_INFINITY
+                document.getElementById("nodeObjId_" + (j*2+2)).remove()
+                document.getElementById("branchObjId_" + (j*2+2)).remove()
+                j = j*2 + 2
+              }
+            }, 6500)
+          }
+          else if(branchIndicator == "Left" && val[j*2+1]!=Number.NEGATIVE_INFINITY) {
+            setTimeout(function() { 
+              while( (j*2+1)<15 && val[j*2+1]!=Number.NEGATIVE_INFINITY) {
+                var nodeObj = makeNodeHelper(j,val[j*2+1])
+                nodeObj.style.opacity = 0
+                fadeInEffect(nodeObj,120,0)          
+                val[j] = val[j*2+1]
+                val[j*2+1] = Number.NEGATIVE_INFINITY
+                document.getElementById("nodeObjId_" + (j*2+1)).remove()
+                document.getElementById("branchObjId_" + (j*2+1)).remove()
+                j = j*2 + 1
+              }
+            }, 6500)
+          }
+          setTimeout(function() { enableButtons() }, 6600)
         }
-        else if(branchIndicator == "Left" && val[j*2+1]!=Number.NEGATIVE_INFINITY) {
-          setTimeout(function() { 
-            while( (j*2+1)<15 && val[j*2+1]!=Number.NEGATIVE_INFINITY) {
-              var nodeObj = makeNodeHelper(j,val[j*2+1])
-              nodeObj.style.opacity = 0
-              fadeInEffect(nodeObj,120,0)          
-              val[j] = val[j*2+1]
-              val[j*2+1] = Number.NEGATIVE_INFINITY
-              document.getElementById("nodeObjId_" + (j*2+1)).remove()
-              document.getElementById("branchObjId_" + (j*2+1)).remove()
-              j = j*2 + 1
-            }
-          }, 6500)
+        else {
+          throwError("Invalid input. Try using a negative or positive number.")
         }
-        setTimeout(function() { enableButtons() }, 6600)
-      }
-      else {
-        throwError("Invalid input. Try using a negative or positive number.")
       }
     }
 
