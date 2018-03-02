@@ -41,7 +41,7 @@
       top: 80px; left: 15px;
       margin-top: 5px;
       visibility: hidden;
-      z-index: 3;
+      z-index: 10;
     }
     #error_box {
       border: 2px solid #e00;
@@ -279,6 +279,7 @@
        successBox.style.visibility = "hidden"
        errorBox.style.visibility = "visible"
        setTimeout(function() { errorBox.style.visibility = "hidden" }, 5000)
+       setTimeout(function() { enableButtons() }, 3000)
     }
 
     function showSuccess(msg) {
@@ -290,6 +291,7 @@
        successBox.style.visibility = "visible"
        fadeOutEffect(successBox, 150)
        setTimeout(function() { successBox.style.visibility = "hidden"; successBox.style.opacity = "1" }, 2500)
+       setTimeout(function() { enableButtons() }, 3000)
     }
 
     function findPosition(newVal) {
@@ -481,9 +483,7 @@
             }
           }, 6500)
         }
-
         setTimeout(function() { enableButtons() }, 6600)
-
       }
       else {
         throwError("Invalid input. Try using a negative or positive number.")
