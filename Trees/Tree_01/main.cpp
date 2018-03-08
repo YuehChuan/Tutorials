@@ -74,40 +74,58 @@ class BinaryTree {
       }
       if(!walker)
         return;
-      else {
-        node* temp = walker;
-        if(walker->right) {
-          temp = walker->right;
-          while(temp->left) {
-            prev = temp;
-            temp = temp->left;
-          }
-          if(temp == walker->right)
-            walker->right = temp->right;
+      node* temp = walker;
+      if(walker->right) {
+        temp = walker->right;
+        while(temp->left) {
+          prev = temp;
+          temp = temp->left;
         }
-        else if(walker->left) {
-          temp = walker->left;
-          while(temp->right) {
-            prev = temp;
-            temp = temp->right;
-          }
-          if(temp == walker->left)
-            walker->left = temp->left;
-        }
-        if(prev->left == temp) {
-          (temp->right) ? prev->left = temp->right : prev->left = NULL;
-        }
-        else if(prev->right == temp){
-          (temp->left) ? prev->right = temp->left : prev->right = NULL;
-        }
-        walker->val = temp->val;
-        delete temp;
+        if(temp == walker->right)
+          walker->right = temp->right;
       }
+      else if(walker->left) {
+        temp = walker->left;
+        while(temp->right) {
+          prev = temp;
+          temp = temp->right;
+        }
+        if(temp == walker->left)
+          walker->left = temp->left;
+      }
+      if(prev->left == temp) {
+        (temp->right) ? prev->left = temp->right : prev->left = NULL;
+      }
+      else if(prev->right == temp){
+        (temp->left) ? prev->right = temp->left : prev->right = NULL;
+      }
+      walker->val = temp->val;
+      delete temp;
     }
     BinaryTree() { root = NULL; }
 };
 
 int main() {
+
+BinaryTree bt;
+bt.addNode(10);
+bt.addNode(5);
+bt.addNode(4);
+bt.addNode(20);
+bt.addNode(30);
+bt.addNode(25);
+bt.addNode(21);
+bt.addNode(29);
+bt.addNode(26);
+bt.addNode(27);
+bt.addNode(28);
+
+bt.removeNode(10);
+bt.print();
+
+
+
+/*
   srand(time(NULL));
   int randomNumberToFind;
   int randomPlacement = rand()%100000;
@@ -121,5 +139,6 @@ int main() {
   bt.print();
   cout<<endl<<"Looking for "<<randomNumberToFind<<"..."<<endl;
   cout<<"Found after "<<bt.findNodeCount(randomNumberToFind)<<" traversals."<<endl;
+  */
   return 0;
 }
