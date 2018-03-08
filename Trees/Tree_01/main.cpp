@@ -94,10 +94,12 @@ class BinaryTree {
           if(temp == walker->left)
             walker->left = temp->left;
         }
-        if(prev->left == temp)
-          prev->left = NULL;
-        else if(prev->right == temp)
-          prev->right = NULL;
+        if(prev->left == temp) {
+          (temp->right) ? prev->left = temp->right : prev->left = NULL;
+        }
+        else if(prev->right == temp){
+          (temp->left) ? prev->right = temp->left : prev->right = NULL;
+        }
         walker->val = temp->val;
         delete temp;
       }
@@ -106,6 +108,21 @@ class BinaryTree {
 };
 
 int main() {
+
+  BinaryTree bt;
+  bt.addNode(10);
+  bt.addNode(20);
+  bt.addNode(30);
+  bt.addNode(25);
+  bt.addNode(24);
+  bt.addNode(21);
+  bt.addNode(22);
+  bt.addNode(23);
+
+  bt.removeNode(20);
+  bt.print();
+
+/*
   srand(time(NULL));
   int randomNumberToFind;
   int randomPlacement = rand()%100000;
@@ -119,5 +136,6 @@ int main() {
   bt.print();
   cout<<endl<<"Looking for "<<randomNumberToFind<<"..."<<endl;
   cout<<"Found after "<<bt.findNodeCount(randomNumberToFind)<<" traversals."<<endl;
+*/
   return 0;
 }
