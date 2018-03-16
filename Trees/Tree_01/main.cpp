@@ -52,7 +52,7 @@ class BinaryTree {
       while(walker) {
         if(v_ == walker->val)
           return count;
-        (v_ < walker->val) ? walker = walker->left : walker = walker->right;
+        walker = (v_ < walker->val) ? walker->left : walker->right;
         count++;
       }
       return -1;
@@ -70,7 +70,7 @@ class BinaryTree {
         if(v_ == walker->val)
           break;
         prev = walker;
-        (v_ < walker->val) ? walker = walker->left : walker = walker->right;
+        walker = (v_ < walker->val) ? walker->left : walker->right;
       }
       if(!walker)
         return;
@@ -94,10 +94,10 @@ class BinaryTree {
           walker->left = temp->left;
       }
       if(prev->left == temp) {
-        (temp->right) ? prev->left = temp->right : prev->left = NULL;
+        prev->left = (temp->right) ? temp->right : NULL;
       }
       else if(prev->right == temp){
-        (temp->left) ? prev->right = temp->left : prev->right = NULL;
+        prev->right = (temp->left) ? temp->left : NULL;
       }
       walker->val = temp->val;
       delete temp;
