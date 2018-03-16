@@ -1,1 +1,1 @@
-<b>Introduction</b> - (<a href="">read</a>) - Binary trees, a manageable approach to finding values.
+<b>Introduction</b> - (<a href="https://towardsdatascience.com/an-introduction-to-binary-trees-a-manageable-approach-to-finding-values-6b35735b1096">read</a>) - Binary trees, a manageable approach to finding values.
