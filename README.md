@@ -14,7 +14,7 @@
     </ul>
   <li><b>Trees: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/">demo</a>)</b></li>
     <ul>
-      <li><b>Introduction</b> - (<a href="">read</a>) -
+      <li><b>Introduction</b> - (<a href="https://towardsdatascience.com/an-introduction-to-binary-trees-a-manageable-approach-to-finding-values-6b35735b1096">read</a>) -
       Binary trees, a manageable approach to finding values.</li>
      
 </ul>
