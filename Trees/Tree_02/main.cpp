@@ -125,7 +125,7 @@ class RedBlackTree {
       int nodeCount = 0;
       while(walker) {
         if(v_ ==  walker->val)
-         return nodeCount;
+          return nodeCount;
         else {
           walker = (v_ < walker->val) ? walker->left : walker->right;
           nodeCount++;
