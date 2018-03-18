@@ -39,7 +39,7 @@ class RedBlackTree {
       if(t3) { t3->parent = g; }
     }
     void rotateRR(node* c, node* p, node* g) {
-      node* t2 = p->left;
+      node* t3 = p->left;
       p->clr = color::black;
       g->clr = color::red;
       attachBase(g,p);
@@ -47,8 +47,8 @@ class RedBlackTree {
       g->parent = p;
       p->right = c;
       c->parent = p;
-      g->right = t2;
-      if(t2) { t2->parent = g; }
+      g->right = t3;
+      if(t3) { t3->parent = g; }
     }
     void rotateLR(node* c, node* p, node* g) {
       node* t2 = c->left;
