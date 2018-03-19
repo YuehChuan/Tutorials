@@ -15,9 +15,9 @@ class RedBlackTree {
     };
     node* root;
     node* sibling(node* n) {
-      node* t = NULL;
-      if(n!=root) { t = (n->parent->left == n) ? n->parent->right : n->parent->left; }
-      return t;
+      node* s = NULL;
+      if(n!=root) { s = (n->parent->left == n) ? n->parent->right : n->parent->left; }
+      return s;
     }
     void attachBase(node* g, node* cp) {
       cp->parent = g->parent;
