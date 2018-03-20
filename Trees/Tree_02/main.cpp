@@ -31,8 +31,6 @@ class RedBlackTree {
       p->clr = color::black;
       g->clr = color::red;
       attachBase(g,p);
-      p->left = c;
-      c->parent = p;
       p->right = g;
       g->parent = p;
       g->left = t3;
@@ -45,8 +43,6 @@ class RedBlackTree {
       attachBase(g,p);
       p->left = g;
       g->parent = p;
-      p->right = c;
-      c->parent = p;
       g->right = t3;
       if(t3) { t3->parent = g; }
     }
