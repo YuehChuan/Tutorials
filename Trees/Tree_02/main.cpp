@@ -43,7 +43,8 @@ class RedBlackTree {
       p->right = g;
       g->up = p;
       g->left = t3;
-      if(t3) { t3->up = g; }
+      if(t3)
+        t3->up = g;
     }
     void rotateRR(node* c, node* p, node* g) {
       node* t3 = p->left;
@@ -53,7 +54,8 @@ class RedBlackTree {
       p->left = g;
       g->up = p;
       g->right = t3;
-      if(t3) { t3->up = g; }
+      if(t3)
+        t3->up = g;
     }
     void rotateLR(node* c, node* p, node* g) {
       node* t2 = c->left;
@@ -66,9 +68,11 @@ class RedBlackTree {
       c->right = g;
       g->up = c;
       p->right = t2;
-      if(t2) { t2->up = p; }
+      if(t2)
+        t2->up = p;
       g->left = t3;
-      if(t3) { t3->up = g; }
+      if(t3)
+        t3->up = g;
     }
     void rotateRL(node* c, node* p, node* g) {
       node* t2 = c->left;
@@ -81,9 +85,11 @@ class RedBlackTree {
       c->right = p;
       p->up = c;
       g->right = t2;
-      if(t2) { t2->up = g; }
+      if(t2)
+        t2->up = g;
       p->left = t3;
-      if(t3) { t3->up = p; }
+      if(t3)
+        t3->up = p;
     }
     void print(node* n) {
       if(n->left)
@@ -157,18 +163,14 @@ class RedBlackTree {
           }
         }
         if(g && p->clr == color::red && (!sibling(p) || sibling(p)->clr == color::black)) { //restructure//
-          if(g->left == p && p->left == c) {
+          if(g->left == p && p->left == c)
             rotateLL(c,p,g);
-           }
-           else if(g->right == p && p->right == c) {
+           else if(g->right == p && p->right == c)
              rotateRR(c,p,g);
-           }
-           else if(g->left == p && p->right == c) {
+           else if(g->left == p && p->right == c)
              rotateLR(c,p,g);
-           }
-           else if(g->right == p && p->left == c) {
+           else if(g->right == p && p->left == c)
              rotateRL(c,p,g);
-           }
         }
       }
     }
