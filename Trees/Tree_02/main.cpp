@@ -19,6 +19,14 @@ class RedBlackTree {
       if(n!=root) { s = (n->parent->left == n) ? n->parent->right : n->parent->left; }
       return s;
     }
+    node* walkTree(node* walker, int v_) {
+      node* prev = NULL;
+      while(walker) {
+        prev = walker;
+        walker = (v_ < walker->val) ? walker->left : walker->right;
+      }
+      return prev;
+    }
     void attachBase(node* g, node* cp) {
       cp->parent = g->parent;
       if (g->parent)
@@ -135,40 +143,31 @@ class RedBlackTree {
         root->clr = color::black;
       }
       else {
-        node* walker = root;
-        while(walker) {
-          if(walker->left && v_ < walker->val)
-            walker = walker->left;
-          else if(walker->right && v_ >= walker->val)
-            walker = walker->right;
-          else {
-            node* c = (v_ < walker->val) ? walker->left = new node(v_,walker) : walker->right = new node(v_,walker);
-            node* p = walker;
-            node* g = walker->parent;
-            while(sibling(p) && sibling(p)->clr == color::red && p->clr==color::red) { //recolor//
-              p->clr = color::black;
-              sibling(p)->clr = color::black;
-              if(g!=root) {
-                g->clr = color::red;
-                c = g, p = c->parent, g = p->parent;
-              }
-            }
-            if(g && p->clr == color::red && (!sibling(p) || sibling(p)->clr == color::black)) { //restructure//
-              if(g->left == p && p->left == c) {
-                rotateLL(c,p,g);
-              }
-              else if(g->right == p && p->right == c) {
-                rotateRR(c,p,g);
-              }
-              else if(g->left == p && p->right == c) {
-                rotateLR(c,p,g);
-              }
-              else if(g->right == p && p->left == c) {
-                rotateRL(c,p,g);
-              }
-            }
-            walker = NULL;
+        node* walker = walkTree(root,v_);
+        node* c = (v_ < walker->val) ? walker->left = new node(v_,walker) : walker->right = new node(v_,walker);
+        node* p = walker;
+        node* g = walker->parent;
+        while(sibling(p) && sibling(p)->clr == color::red && p->clr==color::red) { //recolor//
+          p->clr = color::black;
+          sibling(p)->clr = color::black;
+          if(g!=root) {
+            g->clr = color::red;
+            c = g, p = c->parent, g = p->parent;
           }
+        }
+        if(g && p->clr == color::red && (!sibling(p) || sibling(p)->clr == color::black)) { //restructure//
+          if(g->left == p && p->left == c) {
+            rotateLL(c,p,g);
+           }
+           else if(g->right == p && p->right == c) {
+             rotateRR(c,p,g);
+           }
+           else if(g->left == p && p->right == c) {
+             rotateLR(c,p,g);
+           }
+           else if(g->right == p && p->left == c) {
+             rotateRL(c,p,g);
+           }
         }
       }
     }
