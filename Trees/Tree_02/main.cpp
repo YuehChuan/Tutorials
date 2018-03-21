@@ -8,15 +8,16 @@ class RedBlackTree {
     struct node {
       int val;
       color clr;
-      node* parent;
+      node* up;
       node* left;
       node* right;
-      node(int v_, node* p_) : val(v_), clr(color::red), parent(p_), left(NULL), right(NULL) { };
+      node(int v_, node* u_) : val(v_), clr(color::red), up(u_), left(NULL), right(NULL) { };
     };
     node* root;
     node* sibling(node* n) {
       node* s = NULL;
-      if(n!=root) { s = (n->parent->left == n) ? n->parent->right : n->parent->left; }
+      if(n!=root)
+        s = (n->up->left == n) ? n->up->right : n->up->left;
       return s;
     }
     node* walkTree(node* walker, int v_) {
@@ -28,9 +29,9 @@ class RedBlackTree {
       return prev;
     }
     void attachBase(node* g, node* cp) {
-      cp->parent = g->parent;
-      if (g->parent)
-        (g->parent->left == g) ? g->parent->left = cp : g->parent->right = cp;
+      cp->up = g->up;
+      if (g->up)
+        (g->up->left == g) ? g->up->left = cp : g->up->right = cp;
       else
         root = cp;
     }
@@ -40,9 +41,9 @@ class RedBlackTree {
       g->clr = color::red;
       attachBase(g,p);
       p->right = g;
-      g->parent = p;
+      g->up = p;
       g->left = t3;
-      if(t3) { t3->parent = g; }
+      if(t3) { t3->up = g; }
     }
     void rotateRR(node* c, node* p, node* g) {
       node* t3 = p->left;
@@ -50,9 +51,9 @@ class RedBlackTree {
       g->clr = color::red;
       attachBase(g,p);
       p->left = g;
-      g->parent = p;
+      g->up = p;
       g->right = t3;
-      if(t3) { t3->parent = g; }
+      if(t3) { t3->up = g; }
     }
     void rotateLR(node* c, node* p, node* g) {
       node* t2 = c->left;
@@ -61,13 +62,13 @@ class RedBlackTree {
       g->clr = color::red;
       attachBase(g,c);
       c->left = p;
-      p->parent = c;
+      p->up = c;
       c->right = g;
-      g->parent = c;
+      g->up = c;
       p->right = t2;
-      if(t2) { t2->parent = p; }
+      if(t2) { t2->up = p; }
       g->left = t3;
-      if(t3) { t3->parent = g; }
+      if(t3) { t3->up = g; }
     }
     void rotateRL(node* c, node* p, node* g) {
       node* t2 = c->left;
@@ -76,13 +77,13 @@ class RedBlackTree {
       g->clr = color::red;
       attachBase(g,c);
       c->left = g;
-      g->parent = c;
+      g->up = c;
       c->right = p;
-      p->parent = c;
+      p->up = c;
       g->right = t2;
-      if(t2) { t2->parent = g; }
+      if(t2) { t2->up = g; }
       p->left = t3;
-      if(t3) { t3->parent = p; }
+      if(t3) { t3->up = p; }
     }
     void print(node* n) {
       if(n->left)
@@ -125,13 +126,13 @@ class RedBlackTree {
       root = NULL;
     }
     int findNodeCount(int v_) {
-      node* walker = root;
+      node* w = root;
       int nodeCount = 0;
-      while(walker) {
-        if(v_ ==  walker->val)
+      while(w) {
+        if(v_ ==  w->val)
           return nodeCount;
         else {
-          walker = (v_ < walker->val) ? walker->left : walker->right;
+          w = (v_ < w->val) ? w->left : w->right;
           nodeCount++;
         }
       }
@@ -146,13 +147,13 @@ class RedBlackTree {
         node* walker = walkTree(root,v_);
         node* c = (v_ < walker->val) ? walker->left = new node(v_,walker) : walker->right = new node(v_,walker);
         node* p = walker;
-        node* g = walker->parent;
+        node* g = walker->up;
         while(sibling(p) && sibling(p)->clr == color::red && p->clr==color::red) { //recolor//
           p->clr = color::black;
           sibling(p)->clr = color::black;
           if(g!=root) {
             g->clr = color::red;
-            c = g, p = c->parent, g = p->parent;
+            c = g, p = c->up, g = p->up;
           }
         }
         if(g && p->clr == color::red && (!sibling(p) || sibling(p)->clr == color::black)) { //restructure//
