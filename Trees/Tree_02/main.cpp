@@ -384,7 +384,7 @@ class RedBlackTree {
       node* ios = inorderSuccessor(ntr);
       ntr->val = ios->val;
       if(ios->clr == color::black) {
-        if(ios->right && ios->right->clr == color::red) { //the case ios has the at most one child.//
+        if(ios->right && ios->right->clr == color::red) { //ios has the at most one child.//
           ios->val = ios->right->val;
           ios = ios->right;
         }
