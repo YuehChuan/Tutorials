@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_SIZE 5
+#define MAX_SIZE 3
 
 class BTree {
   private:
