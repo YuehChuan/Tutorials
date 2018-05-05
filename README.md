@@ -17,7 +17,7 @@
       <li><b>Introduction</b> - (<a href="https://towardsdatascience.com/an-introduction-to-binary-trees-a-manageable-approach-to-finding-values-6b35735b1096">read</a>) -
       Binary trees, a manageable approach to finding values.</li>
       <li><b>Intermediate</b> - (<a href="https://towardsdatascience.com/red-black-binary-tree-maintaining-balance-e342f5aa6f5">read</a>) - Red black binary tree, maintaining balance.</li>
-      <li><b>Advanced</b> - (read) - B tree, a balanced and multi-branched.</li>
+      <li><b>Advanced</b> - (<a href="https://medium.com/@dave_p/b-tree-balanced-and-multi-branched-52ef308d67a">read</a>) - B tree, a balanced and multi-branched.</li>
 
 
 
