@@ -3,15 +3,15 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 15
+#define SIZE 5
 
 void printGraph(int graph[SIZE][SIZE]) {
   std::cout<<"Printing graph:\n";
   for(int i=0; i<SIZE; i++)
-    std::cout<<"\t"<<i;
+    std::cout<<"\t"<<i<<":";
   std::cout<<"\n";
   for(int i=0; i<SIZE; i++) {
-    std::cout<<i<<"\t";
+    std::cout<<i<<":\t";
     for(int j=0; j<SIZE; j++)
         std::cout<<graph[i][j]<<"\t";
     std::cout<<"\n";
@@ -28,28 +28,40 @@ void printDistance(int distance[SIZE]) {
   }
 }
 
-void dijkstraDistance(int graph[SIZE][SIZE], int cur) {
+void dijkstrasAlgorithm(int graph[SIZE][SIZE], int cur) {
+
+  //create arrays for distance and visited//
   int distance[SIZE];
   bool visited[SIZE];
-  int mindistance;
+
+  //initialize distance and visited to unreachable and unvisited//
   for(int i=0; i<SIZE; i++)
     distance[i] = INT_MAX, visited[i] = false;
 
+  //at the starting node, set distance to zero//
   distance[cur] = 0;
 
+  //iterate as long as a node is reachable and unvisited//
   while(cur!=-1) {
-    for(int i=0; i<SIZE; i++)
-      distance[i] = (graph[cur][i] && (graph[cur][i]+distance[cur] < distance[i])) ? graph[cur][i]+distance[cur] : distance[i];
 
-    visited[cur] = true, cur = -1, mindistance = INT_MAX;
+    //for neighbor nodes compare a tenative and assigned dist//
+    for(int i=0; i<SIZE; i++)
+      if((graph[cur][i]+distance[cur]<distance[i])&&graph[cur][i])
+        distance[i] = graph[cur][i]+distance[cur];
+
+    //mark the current node as visited, and find the next node//
+    visited[cur] = true, cur = -1;
+    int mindistance = INT_MAX;
     for(int i=0; i<SIZE; i++)
       if(!visited[i] && (distance[i] < mindistance))
         cur = i, mindistance = distance[i];
+
   }
 
   printDistance(distance);
 
 }
+
 
 int main() {
 
@@ -60,7 +72,7 @@ int main() {
       graph[j][i] = graph[i][j] = (rand()%SIZE == (j || i) ) ? 0 : rand()%500;
 
   printGraph(graph);
-  dijkstraDistance(graph,0);
+  dijkstrasAlgorithm(graph,0);
 
   return 0;
 }
