@@ -36,7 +36,7 @@
   <li><b>Graphs: </b></li>
     <ul>
       <li><b>Introduction</b> - 
-      (read) - 
+      (<a target="_blank" href="https://towardsdatascience.com/graphs-paths-dijkstra-4d8b356ad6fa">read</a>) - 
       (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Graphs/Graph_01/">demo</a>) -
         Graphs & paths, Dijkstra. 
         </li>
