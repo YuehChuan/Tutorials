@@ -5,11 +5,14 @@
 <ul>
   <li><b>Linked lists: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/LinkedLists/">demo</a>)</b></li>
     <ul>
-      <li><b>Introduction</b> - (<a target="_blank" href="https://medium.freecodecamp.org/linked-lists-why-what-and-how-f96b04790ac4">read</a>) -
+      <li><b>Introduction</b> - 
+      (<a target="_blank" href="https://medium.freecodecamp.org/linked-lists-why-what-and-how-f96b04790ac4">read</a>) -
       Singly linked list that appends nodes to the head of the list.</li>
-      <li><b>Intermediate</b> - (<a target="_blank" href="https://medium.freecodecamp.org/linked-list-why-what-and-how-pt-2-20c5f19323c3">read</a>) - 
+      <li><b>Intermediate</b> - 
+      (<a target="_blank" href="https://medium.freecodecamp.org/linked-list-why-what-and-how-pt-2-20c5f19323c3">read</a>) - 
       Singly linked list that adds nodes in order.</li>
-      <li><b>Advanced</b> - (<a target="_blank" href="https://medium.freecodecamp.org/doubly-linked-list-why-what-and-how-59aba937abcf">read</a>) -
+      <li><b>Advanced</b> &nbsp; - &nbsp;
+      (<a target="_blank" href="https://medium.freecodecamp.org/doubly-linked-list-why-what-and-how-59aba937abcf">read</a>) -
       Doubly linked list that adds nodes in order, and has a head and tail.</li>
     </ul>
   <li><b>Trees: </b></li>
