@@ -24,7 +24,7 @@
       (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/Tree_02">demo</a>) - 
         Red black binary tree, maintaining balance.
       </li>
-      <li><b>Advanced</b> - 
+      <li><b>Advanced &nbsp; &nbsp;</b> - 
       (<a target="_blank" href="https://medium.com/@dave_p/b-tree-balanced-and-multi-branched-52ef308d67a">read</a>) - 
       (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/Tree_03">demo</a>) -
         B tree, a balanced and multi-branched.
