@@ -19,7 +19,7 @@
       <li><b>Intermediate</b> - (<a href="https://towardsdatascience.com/red-black-binary-tree-maintaining-balance-e342f5aa6f5">read</a>) - Red black binary tree, maintaining balance.</li>
       <li><b>Advanced</b> - (<a href="https://medium.com/@dave_p/b-tree-balanced-and-multi-branched-52ef308d67a">read</a>) - B tree, a balanced and multi-branched.</li>
     </ul>
-  <li><b>Graphs: (<a href target="_blank" href="https://davidpynes.github.io/Tutorials/Graphs/Graph_01/">demo</a>)</b></li>
+  <li><b>Graphs: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Graphs/Graph_01/">demo</a>)</b></li>
     <ul>
       <li><b>Introduction</b> - (read) - Graphs & paths, Dijkstra.</li>
     </ul>
