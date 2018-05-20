@@ -12,7 +12,7 @@
       <li><b>Advanced</b> - (<a target="_blank" href="https://medium.freecodecamp.org/doubly-linked-list-why-what-and-how-59aba937abcf">read</a>) -
       Doubly linked list that adds nodes in order, and has a head and tail.</li>
     </ul>
-  <li><b>Trees: </b></li>
+  <li><b>Trees: - (demo_01 | demo_02 | demo_03)</b></li>
     <ul>
       <li><b>Introduction</b> - (<a target="_blank" href="https://towardsdatascience.com/an-introduction-to-binary-trees-a-manageable-approach-to-finding-values-6b35735b1096">read</a>) -
       Binary trees, a manageable approach to finding values. - 
