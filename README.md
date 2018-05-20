@@ -11,7 +11,7 @@
       <li><b>Intermediate</b> - 
       (<a target="_blank" href="https://medium.freecodecamp.org/linked-list-why-what-and-how-pt-2-20c5f19323c3">read</a>) - 
       Singly linked list that adds nodes in order.</li>
-      <li><b>Advanced</b> &nbsp; &nbsp; - &nbsp;
+      <li><b>Advanced</b> &nbsp; - &nbsp;
       (<a target="_blank" href="https://medium.freecodecamp.org/doubly-linked-list-why-what-and-how-59aba937abcf">read</a>) -
       Doubly linked list that adds nodes in order, and has a head and tail.</li>
     </ul>
@@ -27,7 +27,7 @@
       (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/Tree_02">demo</a>) - 
         Red black binary tree, maintaining balance.
       </li>
-      <li><b>Advanced </b> &nbsp; &nbsp; - &nbsp;
+      <li><b>Advanced </b> &nbsp; - &nbsp;
       (<a target="_blank" href="https://medium.com/@dave_p/b-tree-balanced-and-multi-branched-52ef308d67a">read</a>) - 
       (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/Tree_03">demo</a>) -
         B tree, a balanced and multi-branched.
