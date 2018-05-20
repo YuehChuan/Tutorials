@@ -12,12 +12,18 @@
       <li><b>Advanced</b> - (<a href="https://medium.freecodecamp.org/doubly-linked-list-why-what-and-how-59aba937abcf">read</a>) -
       Doubly linked list that adds nodes in order, and has a head and tail.</li>
     </ul>
-  <li><b>Trees: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/Tree_01">demo</a>)</b></li>
+  <li><b>Trees: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/Tree_02">demo</a>)</b></li>
     <ul>
       <li><b>Introduction</b> - (<a href="https://towardsdatascience.com/an-introduction-to-binary-trees-a-manageable-approach-to-finding-values-6b35735b1096">read</a>) -
-      Binary trees, a manageable approach to finding values.</li>
-      <li><b>Intermediate</b> - (<a href="https://towardsdatascience.com/red-black-binary-tree-maintaining-balance-e342f5aa6f5">read</a>) - Red black binary tree, maintaining balance.</li>
-      <li><b>Advanced</b> - (<a href="https://medium.com/@dave_p/b-tree-balanced-and-multi-branched-52ef308d67a">read</a>) - B tree, a balanced and multi-branched.</li>
+      Binary trees, a manageable approach to finding values. - 
+      (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/Tree_01">demo</a>)
+      </li>
+      <li><b>Intermediate</b> - (<a href="https://towardsdatascience.com/red-black-binary-tree-maintaining-balance-e342f5aa6f5">read</a>) - Red black binary tree, maintaining balance. - 
+      (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/Tree_02">demo</a>)
+      </li>
+      <li><b>Advanced</b> - (<a href="https://medium.com/@dave_p/b-tree-balanced-and-multi-branched-52ef308d67a">read</a>) - B tree, a balanced and multi-branched. - 
+      (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Trees/Tree_03">demo</a>)
+      </li>
     </ul>
   <li><b>Graphs: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Graphs/Graph_01/">demo</a>)</b></li>
     <ul>
