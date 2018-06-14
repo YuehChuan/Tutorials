@@ -3,7 +3,7 @@
 
 <h5>Topics:</h5>
 <ul>
-  <li><b>Linked lists: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/LinkedLists/List_02/">demo</a>)</b></li>
+  <li><b>Linked lists: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/LinkedLists/LinkedList_03/">demo</a>)</b></li>
     <ul>
       <li><b>Introduction</b> - 
       (<a target="_blank" href="https://medium.freecodecamp.org/linked-lists-why-what-and-how-f96b04790ac4">read</a>) -
