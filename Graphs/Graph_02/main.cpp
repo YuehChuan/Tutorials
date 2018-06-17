@@ -24,11 +24,12 @@ struct point {
   const bool operator==(const point& rhs) const { return ( x == rhs.x && y == rhs.y) ? 1 : 0; };
 };
 
-//define a heuristic, a weighted distance//
+//define a heuristic//
 float euclideanDistance(point a, point b) {
   return (pow( pow( a.x - b.x, 2.0) + pow( a.y - b.y, 2.0), 0.5 ));
 }
 
+//define a templated print//
 template<class T>
 void print(T arr[HEIGHT][WIDTH]) {
   for(int i=0; i<HEIGHT; i++) {
@@ -38,6 +39,7 @@ void print(T arr[HEIGHT][WIDTH]) {
   }
 }
 
+//overload print to display pretty mazes//
 void print(int arr[HEIGHT][WIDTH], std::vector<point> path) {
   for(point p : path) { arr[p.y][p.x] = -1; }
   for(int i=0; i<HEIGHT+2; i++) {
@@ -55,12 +57,7 @@ void print(int arr[HEIGHT][WIDTH], std::vector<point> path) {
   }
 }
 
-
-/* Generate a maze using a depth first search and recursive stack.
-   Randomly select a point's neighbor (L,R,U,D), check boundary
-   conditions At that point and check if there is a wall. If
-   there is a wall convert that wall to a path. Note, move in increments of two.
-*/
+//define random mazes using dfs and recursive stack//
 void randomMaze(int maze[HEIGHT][WIDTH], point p) {
   //define 2nd neighbors, then shuffle for randomness//
   point rn[4] = {
@@ -71,8 +68,8 @@ void randomMaze(int maze[HEIGHT][WIDTH], point p) {
   };
   std::random_shuffle(&rn[0], &rn[4]);
 
-  /* For all neighbors check if the neighbor point is a wall.
-     If neighbor point is a wall, convert point to a path and add to stack. */
+  /* For all 2nd degree neighbors, check if the neighbor is a wall
+     If so, convert point to a path and add to stack */
   for(point cn : rn) {
     if(cn.inBounds() && !maze[cn.y][cn.x]) {
       if(cn.d == direction::L)
@@ -89,19 +86,19 @@ void randomMaze(int maze[HEIGHT][WIDTH], point p) {
   }
 }
 
-/* A* is a variation of Dijkstras algorithm.
-   full explanation: http://www..... */
+//A* a variation of Dijkstras algorithm//
 std::vector<point> astar(int maze[HEIGHT][WIDTH], point s, point g) {
-  //define sets for distance and visited, and initialize sets//
+  //define sets for paths, distance, and visited//
   std::vector<point> paths[HEIGHT][WIDTH];
   float dist[HEIGHT][WIDTH] = { 0 };
   bool visited[HEIGHT][WIDTH] = { 0 };
 
+  //initially all distances are INT_MAX (infinity)//
   for(int i=0; i<HEIGHT; i++)
     for(int j=0; j<WIDTH; j++)
       dist[i][j] = INT_MAX;
 
-  //set current to starting point//
+  //set current to starting point, calculate initial distance//
   point cur = s;
   dist[cur.y][cur.x] = euclideanDistance(s,g);
 
@@ -118,7 +115,7 @@ std::vector<point> astar(int maze[HEIGHT][WIDTH], point s, point g) {
       point(cur.x,cur.y+1,direction::D)
     };
 
-    //calculate distance at neighbors and update distance if calculated distance is smaller//
+    //calculate distance at neighbors and update distances if calculated distances are smaller//
     for(point cn : nb )
       if( cn.inBounds() && maze[cn.y][cn.x] &&
         (euclideanDistance(cn,g) + dist[cur.y][cur.x] + maze[cn.y][cn.x] < dist[cn.y][cn.x]) ) {
@@ -135,7 +132,7 @@ std::vector<point> astar(int maze[HEIGHT][WIDTH], point s, point g) {
           cur = point(j,i), md = dist[i][j];
   }
 
-  //push the goal point to the path, and return the path from start to goal//
+  //push the goal point to the path and return the path from start to goal//
   paths[g.y][g.x].push_back(g);
   return paths[g.y][g.x];
 
@@ -158,7 +155,7 @@ int main() {
   //solve with a* algorithm//
   std::vector<point> path = astar(maze,s,g);
 
-  //output information to console//
+  //output maze in console//
   std::cout<<"\nStarting from: ";
   s.print();
   std::cout<<"Going to: ";
