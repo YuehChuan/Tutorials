@@ -36,5 +36,7 @@
       (<a target="_blank" href="https://towardsdatascience.com/graphs-paths-dijkstra-4d8b356ad6fa">read</a>) - 
        Graphs & paths, Dijkstra. 
       </li>
+      <li><b>Intermediate</b> - (<a href="https://medium.com/@dave_p/graphs-paths-a-getting-out-of-a-maze-a3d7c079a5c6" target="_blank">read</a>) - Graphs & paths, A*, getting out of a maze.
+      </li>
     </ul>
 </ul>
