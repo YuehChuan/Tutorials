@@ -30,7 +30,7 @@
       B tree, a balanced and multi-branched.
       </li>
     </ul>
-  <li><b>Graphs: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Graphs/Graph_01/">demo</a>)</b></li>
+  <li><b>Graphs: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Graphs/Graph_03/">demo</a>)</b></li>
     <ul>
       <li><b>Introduction</b> - 
       (<a target="_blank" href="https://towardsdatascience.com/graphs-paths-dijkstra-4d8b356ad6fa">read</a>) - 
