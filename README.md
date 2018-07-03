@@ -38,5 +38,7 @@
       </li>
       <li><b>Intermediate</b> - (<a href="https://medium.com/@dave_p/graphs-paths-a-getting-out-of-a-maze-a3d7c079a5c6" target="_blank">read</a>) - Graphs & paths, A*, getting out of a maze.
       </li>
+      <li><b>Advanced</b> - (<a href="https://medium.com/@dave_p/graphs-paths-bron-kerbosch-maximal-cliques-e6cab843bc2c">read</a>) -
+Graphs & paths, Bron-Kerbosch, maximal cliques.</li>
     </ul>
 </ul>
