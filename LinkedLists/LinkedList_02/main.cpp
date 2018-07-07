@@ -1,6 +1,4 @@
 #include <iostream>
-#include <stdlib.h>
-#include <time.h>
 
 using namespace std;
 
@@ -86,10 +84,11 @@ node* mergeLists(linkedlist a, linkedlist b) {
 */
 
 int main() {
-  srand(time(NULL));
   linkedlist ll;
-  for(int i=0; i<15; i++)
-    ll.addSortedNode(rand()%100);
+  ll.addSortedNode(3);
+  ll.addSortedNode(1);
+  ll.addSortedNode(2);
+  ll.addSortedNode(4);
   ll.print();
   return 0;
 }

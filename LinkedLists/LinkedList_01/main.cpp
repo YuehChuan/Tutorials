@@ -37,6 +37,7 @@ int main() {
   ll.addNode(3);
   ll.addNode(1);
   ll.addNode(2);
+  ll.addNode(4);
   ll.printList();
   return 0;
 }

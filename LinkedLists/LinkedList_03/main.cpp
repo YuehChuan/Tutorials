@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdlib.h>
-#include <time.h>
 
 using namespace std;
 
@@ -96,11 +95,11 @@ class doublylinkedlist {
 };
 
 int main() {
-  srand(time(NULL));
   doublylinkedlist dll;
-  for(int i=0;i<10;i++) {
-    (i%2 == 0) ? dll.addFromHead(rand()%100) : dll.addFromTail(rand()%100);
-  }
+  dll.addFromHead(3);
+  dll.addFromHead(1);
+  dll.addFromHead(2);
+  dll.addFromHead(4);
   dll.printFromHead();
   dll.printFromTail();
   return 0;
