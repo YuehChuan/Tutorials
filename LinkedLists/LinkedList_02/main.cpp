@@ -41,7 +41,7 @@ class linkedlist {
 
      void print() {
        node* temp = head;
-       cout<<"Printing list: "<<endl<<"[";
+       cout<<"[ ";
        while(temp->next) {
          cout<<temp->val<<", ";
          temp = temp->next;

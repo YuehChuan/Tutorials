@@ -20,7 +20,7 @@ class doublylinkedlist {
     }
     void printFromHead() {
       node* temp = head;
-      cout<<"Printing from the START of the list: "<<endl<<"[ ";
+      cout<<"[ ";
       while(temp) {
         cout<<temp->val<<" ";
         temp = temp->next;
@@ -29,7 +29,7 @@ class doublylinkedlist {
     }
     void printFromTail() {
        node* temp = tail;
-       cout<<"Printing from the END of the list: "<<endl<<"[ ";
+       cout<<"[ ";
        while(temp) {
          cout<<temp->val<<" ";
          temp = temp->prev;
