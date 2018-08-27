@@ -19,7 +19,7 @@
     <ul>
       <li><b>Introduction</b> - 
       (<a target="_blank" href="https://towardsdatascience.com/an-introduction-to-binary-trees-a-manageable-approach-to-finding-values-6b35735b1096">read</a>) - 
-      Binary trees, a manageable approach to finding values.
+      Basic binary trees, a manageable approach to finding values.
       </li>
       <li><b>Intermediate</b> - 
       (<a target="_blank" href="https://towardsdatascience.com/red-black-binary-tree-maintaining-balance-e342f5aa6f5">read</a>) - 
@@ -40,5 +40,7 @@
       </li>
       <li><b>Advanced</b> - (<a href="https://medium.com/@dave_p/graphs-paths-bron-kerbosch-maximal-cliques-e6cab843bc2c">read</a>) -
 Graphs & paths, Bron-Kerbosch, maximal cliques.</li>
+      <li><b>Advanced</b> - (<a href="https://medium.com/@dave_p/graphs-and-paths-pagerank-54f180a1aa0a">read</a>) -
+        Graphs & paths, PageRank.</li>
     </ul>
 </ul>
