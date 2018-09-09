@@ -27,20 +27,20 @@
       </li>
       <li><b>Advanced </b> - 
       (<a target="_blank" href="https://medium.com/@dave_p/b-tree-balanced-and-multi-branched-52ef308d67a">read</a>) - 
-      B tree, a balanced and multi-branched.
+      B tree, balanced and multi-branched.
       </li>
     </ul>
-  <li><b>Graphs: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Graphs/Graph_03/">demo</a>)</b></li>
+  <li><b>Graphs & Paths: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Graphs/Graph_03/">demo</a>)</b></li>
     <ul>
       <li><b>Introduction</b> - 
       (<a target="_blank" href="https://towardsdatascience.com/graphs-paths-dijkstra-4d8b356ad6fa">read</a>) - 
-       Graphs & paths, Dijkstra. 
+       Dijkstra. 
       </li>
-      <li><b>Intermediate</b> - (<a href="https://medium.com/@dave_p/graphs-paths-a-getting-out-of-a-maze-a3d7c079a5c6" target="_blank">read</a>) - Graphs & paths, A*, getting out of a maze.
+      <li><b>Intermediate</b> - (<a href="https://medium.com/@dave_p/graphs-paths-a-getting-out-of-a-maze-a3d7c079a5c6" target="_blank">read</a>) - A*, getting out of a maze.
       </li>
       <li><b>Advanced</b> - (<a href="https://medium.com/@dave_p/graphs-paths-bron-kerbosch-maximal-cliques-e6cab843bc2c">read</a>) -
-Graphs & paths, Bron-Kerbosch, maximal cliques.</li>
+Bron-Kerbosch, maximal cliques.</li>
       <li><b>Advanced</b> - (<a href="https://medium.com/@dave_p/graphs-and-paths-pagerank-54f180a1aa0a">read</a>) -
-        Graphs & paths, PageRank.</li>
+       PageRank.</li>
     </ul>
 </ul>
