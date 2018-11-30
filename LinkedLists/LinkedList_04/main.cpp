@@ -34,7 +34,7 @@ class Queue {
         front = rear = NULL;
         delete t;
       }
-      else { //case 3: the queue hase more than one node.
+      else { //case 3: the queue has more than one node.
         node* t = front;
         node* s = rear; //crawl the links to the node before the current front
         while( s->link != front )
