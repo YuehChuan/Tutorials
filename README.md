@@ -8,11 +8,14 @@
       <li><b>Introduction</b> - 
       (<a target="_blank" href="https://medium.freecodecamp.org/linked-lists-why-what-and-how-f96b04790ac4">read</a>) -
       Singly linked list that appends nodes to the head of the list.</li>
+      <li><b>Easy</b> - 
+      (<a target="_blank" href="https://medium.com/@dave_p/linked-lists-the-stack-fa73bc2a37ad">read</a>) - 
+      A linked list that behaves as a stack, last in first out.</li>
       <li><b>Intermediate</b> - 
       (<a target="_blank" href="https://medium.freecodecamp.org/linked-list-why-what-and-how-pt-2-20c5f19323c3">read</a>) - 
       Singly linked list that adds nodes in order.</li>
       <li><b>Intermediate</b> - 
-      (<a target="_blank" href="https://medium.freecodecamp.org/linked-list-why-what-and-how-pt-2-20c5f19323c3">read</a>) - 
+      (<a target="_blank" href="https://towardsdatascience.com/linked-lists-the-queue-7c1f709aa141">read</a>) - 
       A queue styled linked list that pops from the front and links to the rear.</li>
       <li><b>Advanced</b> - 
       (<a target="_blank" href="https://medium.freecodecamp.org/doubly-linked-list-why-what-and-how-59aba937abcf">read</a>) -
