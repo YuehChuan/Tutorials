@@ -1,6 +1,4 @@
 # Tutorials
-<h4>This repository provides code and webapps for tutorials written <a href="https://medium.com/@dave_p">here</a>.</h4>
-
 <h5>Topics:</h5>
 <ul>
   <li><b>Linked lists: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/LinkedLists/LinkedList_03/">demo</a>)</b></li>
