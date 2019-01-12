@@ -1,5 +1,5 @@
 # Tutorials
-<h4>Comprehensive guides to learning the world's most fascinating data structures.</h4>
+<h5>Comprehensive guides to understand the most fascinating data structures.</h5>
 
 <h5>Topics:</h5>
 <ul>
