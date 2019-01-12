@@ -25,7 +25,11 @@
     <ul>
       <li><b>Introduction</b> - 
       (<a target="_blank" href="https://towardsdatascience.com/an-introduction-to-binary-trees-a-manageable-approach-to-finding-values-6b35735b1096">read</a>) - 
-      Basic binary trees, a manageable approach to finding values.
+      Basic binary trees, the BST, a manageable approach to finding values.
+      </li>
+      <li><b>Easy</b> - 
+      (<a target="_blank" href="https://medium.com/@dave_p/binary-trees-the-heap-381efd4a4611">read</a>) - 
+      Heap, how to retain max values.
       </li>
       <li><b>Intermediate</b> - 
       (<a target="_blank" href="https://towardsdatascience.com/red-black-binary-tree-maintaining-balance-e342f5aa6f5">read</a>) - 
