@@ -1,4 +1,6 @@
 # Tutorials
+<h4>Comprehensive guides to learning the world's most fascinating data structures.</h4>
+
 <h5>Topics:</h5>
 <ul>
   <li><b>Linked lists: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/LinkedLists/LinkedList_03/">demo</a>)</b></li>
