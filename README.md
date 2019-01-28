@@ -38,6 +38,10 @@
       <li><b>Advanced </b> - 
       (<a target="_blank" href="https://medium.com/@dave_p/b-tree-balanced-and-multi-branched-52ef308d67a">read</a>) - 
       B tree, balanced and multi-branched.
+      </li>      
+      <li><b>Advanced </b> - 
+      (<a target="_blank" href="https://medium.com/@dave_p/af2e9d725abe">read</a>) - 
+      Finding the diameter, searching for a longest path.
       </li>
     </ul>
   <li><b>Graphs & Paths: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Graphs/Graph_03/">demo</a>)</b></li>
