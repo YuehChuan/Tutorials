@@ -35,7 +35,7 @@ class graph {
         if(p->page == p1_) { n1 = p; }
         else if(p->page == p2_) { n2 = p; }
       }
-      //Note, links are now a directed edges,
+      //Note, links are now directed edges,
       //such that A is a link to  B,
       //but B is not necesarily a link to A.
       if(n1 && n2)
@@ -66,18 +66,19 @@ void pageRank(graph g) {
   bool cf = true;
   while(cf) {
     m.clear();
-    for(auto p : u) {
-      for(auto l : (*p).links) {
-        if( (*p).links.empty() )
-          m[l] += (float)1/N;
-       else
-          m[l] += (float)p->pr/(*p).links.size();
-      }
-    }
+
+    float S = 0;
+    for(auto p : u)
+      if( (*p).links.empty() )
+        S += (float)(d*p->pr)/N;
+
+    for(auto p : u)
+      for(auto l : (*p).links)
+        m[l] += (float)p->pr/(*p).links.size();
 
     cf = false;
     for(auto p : u) {
-      m[p] = rp + d*m[p];
+      m[p] = rp + S + d*m[p];
       if( abs(m[p] - (*p).pr) > me )
         cf = true;
       (*p).pr = m[p];
@@ -106,5 +107,6 @@ int main() {
   pageRank(g);
 
   g.print();
+
   return 0;
 }
