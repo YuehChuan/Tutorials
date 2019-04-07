@@ -30,15 +30,10 @@ void quicksort(int* data, int low, int high) {
 }
 
 int main() {
-
   int size = 6;
   int data[size] = {2, 6, 5, 1, 4, 3};
-
   print(data, size);
-
   quicksort(data, 0, size-1);
-
   print(data, size);
-
   return 0;
 }
