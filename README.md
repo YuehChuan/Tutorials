@@ -67,4 +67,5 @@ Bron-Kerbosch, maximal cliques.</li>
       <li> 
       (<a target="_blank" href="https://towardsdatascience.com/dividing-conquering-data-in-disarray-14e84e09a98e">read</a>) -
       Quicksort.</li>
-      <li> 
+    </ul>
+</ul>
