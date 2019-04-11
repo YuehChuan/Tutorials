@@ -62,7 +62,7 @@ Bron-Kerbosch, maximal cliques.</li>
     </ul>
 </ul>
 <ul>
-  <li><b>Sorting : (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Sorting/Sorting_01/">demo</a>)</b></li>
+  <li><b>Sorting: (<a target="_blank" href="https://davidpynes.github.io/Tutorials/Sorting/Sorting_01/">demo</a>)</b></li>
     <ul>
       <li> 
       (<a target="_blank" href="https://towardsdatascience.com/dividing-conquering-data-in-disarray-14e84e09a98e">read</a>) -
