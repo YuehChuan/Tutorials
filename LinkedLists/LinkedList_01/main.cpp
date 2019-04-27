@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 class linkedlist {
   private:
     struct node {
@@ -32,6 +34,7 @@ class linkedlist {
       cout << "]\n";
     }
 };
+
 int main() {
   linkedlist ll;
   ll.addNode(3);
