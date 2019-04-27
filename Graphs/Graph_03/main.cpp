@@ -91,6 +91,7 @@ int main() {
   string people[15] = { "Amy", "Jack", "Erin", "Sally", "Sue", "Max", "Jake", "Tom", "Lu", "Joe", "Ryan", "Jess", "Liz", "Ty", "Jay"};
   for(auto p : people)
     g.addNode(p);
+  
   g.addEdge("Amy","Erin");
   g.addEdge("Amy","Jack");
   g.addEdge("Erin","Jack");
