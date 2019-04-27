@@ -3,7 +3,6 @@
 using namespace std;
 
 class Queue {
-
   private:
     struct node {
       node* link;
@@ -12,9 +11,7 @@ class Queue {
     };
     node* front;
     node* rear;
-
   public:
-
     void enqueue(int v_) {
       node* temp = new node(v_);
       if(!front) //case 1: the queue is empty.
@@ -24,7 +21,6 @@ class Queue {
         rear = temp;
       }
     }
-
     void dequeue() {
       if(!front) {
         //case 1: the queue is empty, do nothing.
@@ -36,15 +32,14 @@ class Queue {
       }
       else { //case 3: the queue has more than one node.
         node* t = front;
-        node* s = rear; //crawl the links to the node before the current front
+        node* s = rear;
         while( s->link != front )
           s = s->link;
-        front = s; //update the front of the queue
+        front = s; 
         s->link = NULL;
         delete t;
       }
     }
-
     void print() {
       cout<<"REAR -- ";
       node* t = rear;
@@ -58,31 +53,30 @@ class Queue {
       else
         cout<<"[ ] -- FRONT\n\n";
     }
-
     Queue() {
       front = NULL;
       rear = NULL;
     }
-
 };
 
 int main() {
   Queue q;
+  
+  q.print(); //test empty queue
+  
+  q.enqueue(1); //test queue with one node//
   q.print();
-  q.enqueue(1);
+  
+  q.enqueue(2); //test queue with more than one node//
   q.print();
-  q.enqueue(2);
+  
+  q.dequeue(); //test dequeue to one node//
   q.print();
-  q.dequeue();
-  q.print();
+  
   q.enqueue(3);
-  q.enqueue(4);
+  q.enqueue(4);  
+  q.dequeue(); //test dequeue with more than one node//
   q.print();
-  q.dequeue();
-  q.print();
-  q.dequeue();
-  q.print();
-  q.dequeue();
-  q.print();
+  
   return 0;
 }
