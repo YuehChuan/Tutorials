@@ -3,16 +3,13 @@
 using namespace std;
 
 class Stack {
-
   private:
     struct node {
       int value;
       node* link;
       node(int v_) : value(v_), link(NULL) {};
     };
-
     node* top;
-
   public:
     void push(int v_) {
       if(!top)
@@ -23,7 +20,6 @@ class Stack {
         top = temp;
       }
     }
-
     void pop() {
       if(top) {
         node* temp = top;
@@ -31,12 +27,10 @@ class Stack {
         delete temp;
       }
     }
-
     const int peek() {
       if(top)
         return top->value;
     }
-
     void print() {
       if(top) {
         cout<<"TOP -- ";
@@ -50,17 +44,14 @@ class Stack {
       else
         cout<<"TOP -- []\n";
     }
-
     Stack() {
       top = NULL;
     }
-
 };
 
 int main() {
   Stack s;
   s.print();
-
 
   s.push(1);
   cout<<"**PUSH**\n";
