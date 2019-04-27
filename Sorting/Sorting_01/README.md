@@ -1,1 +1,1 @@
-Introduction - (read) - Sorting: Quicksort.
+Introduction - (read) - Sorting: how to quicksort.
