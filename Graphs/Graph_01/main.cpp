@@ -44,12 +44,12 @@ void dijkstrasAlgorithm(int graph[SIZE][SIZE], int cur) {
   //iterate as long as a node is reachable and unvisited//
   while(cur!=-1) {
 
-    //for neighbor nodes compare a tenative and assigned dist//
+    //for all neighbor nodes compare a tenative and assigned distance//
     for(int i=0; i<SIZE; i++)
       if((graph[cur][i]+distance[cur]<distance[i])&&graph[cur][i])
         distance[i] = graph[cur][i]+distance[cur];
 
-    //mark the current node as visited, and find the next node//
+    //mark the current node as visited, then move on to next node//
     visited[cur] = true, cur = -1;
     int mindistance = INT_MAX;
     for(int i=0; i<SIZE; i++)
