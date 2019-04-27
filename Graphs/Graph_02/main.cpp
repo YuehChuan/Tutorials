@@ -24,12 +24,12 @@ struct point {
   const bool operator==(const point& rhs) const { return ( x == rhs.x && y == rhs.y) ? 1 : 0; };
 };
 
-//define a heuristic//
+//the heuristic//
 float euclideanDistance(point a, point b) {
   return (pow( pow( a.x - b.x, 2.0) + pow( a.y - b.y, 2.0), 0.5 ));
 }
 
-//define a templated print//
+//templated printing//
 template<class T>
 void print(T arr[HEIGHT][WIDTH]) {
   for(int i=0; i<HEIGHT; i++) {
@@ -39,7 +39,7 @@ void print(T arr[HEIGHT][WIDTH]) {
   }
 }
 
-//overload print to display pretty mazes//
+//overloaded printing (to display pretty mazes)//
 void print(int arr[HEIGHT][WIDTH], std::vector<point> path) {
   for(point p : path) { arr[p.y][p.x] = -1; }
   for(int i=0; i<HEIGHT+2; i++) {
@@ -107,7 +107,7 @@ std::vector<point> astar(int maze[HEIGHT][WIDTH], point s, point g) {
     //update visited at current//
     visited[cur.y][cur.x] = 1;
 
-    //neighboring points//
+    //the neighboring points//
     point nb[4] = {
       point(cur.x-1,cur.y,direction::L),
       point(cur.x+1,cur.y,direction::R),
@@ -115,7 +115,7 @@ std::vector<point> astar(int maze[HEIGHT][WIDTH], point s, point g) {
       point(cur.x,cur.y+1,direction::D)
     };
 
-    //calculate distance at neighbors and update distances if calculated distances are smaller//
+    //calculate distance at neighbors. Update the distances if the calculated distances is smaller//
     for(point cn : nb )
       if( cn.inBounds() && maze[cn.y][cn.x] &&
         (euclideanDistance(cn,g) + dist[cur.y][cur.x] + maze[cn.y][cn.x] < dist[cn.y][cn.x]) ) {
@@ -123,7 +123,7 @@ std::vector<point> astar(int maze[HEIGHT][WIDTH], point s, point g) {
           paths[cn.y][cn.x] = paths[cur.y][cur.x], paths[cn.y][cn.x].push_back(cur);
       }
 
-    //select the next point to be current//
+    //select the next point//
     cur = point(-1,-1);
     float md = INT_MAX;
     for(int i=0; i<HEIGHT; i++)
@@ -132,7 +132,7 @@ std::vector<point> astar(int maze[HEIGHT][WIDTH], point s, point g) {
           cur = point(j,i), md = dist[i][j];
   }
 
-  //push the goal point to the path and return the path from start to goal//
+  //A* complete, push the goal, return a path from start to goal//
   paths[g.y][g.x].push_back(g);
   return paths[g.y][g.x];
 
