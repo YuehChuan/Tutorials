@@ -35,8 +35,7 @@ class graph {
         if(p->page == p1_) { n1 = p; }
         else if(p->page == p2_) { n2 = p; }
       }
-      //Note, links are now directed//
-      if(n1 && n2)
+      if(n1 && n2)  //Note, links are now directed//
         n1->links.insert(n2);
     }
     set<node*> getUniverse() {
@@ -51,7 +50,6 @@ class graph {
 void pageRank(graph g) {
   set<node*> u = g.getUniverse();
 
-  //map to hold future page rank//
   map<node*, float> m;
 
   int N = u.size();
@@ -86,8 +84,11 @@ void pageRank(graph g) {
 }
 
 int main() {
+  
   graph g;
+  
   string pages[5] = {"Mspc","Twtr","Amzn","Medm","Fb"};
+  
   for(auto p : pages)
     g.addNode(p);
 
